@@ -15,4 +15,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/XOS.mk
+    $(LOCAL_DIR)/du.mk
