@@ -18,7 +18,7 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sanders/full_sanders.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common Nitrogen stuff.
 $(call inherit-product,vendor/nitrogen/products/common.mk )
 
 # Boot animation
@@ -34,6 +34,7 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="Moto G5S Plus"
+    BUILD_FINGERPRINT=motorola/sanders_n/sanders_n:7.1.1/NPS26.116-61/74:user/test-keys \
+    PRODUCT_NAME="Moto G5S Plus"	
 
 TARGET_VENDOR := motorola
