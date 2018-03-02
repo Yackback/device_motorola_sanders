@@ -1,4 +1,4 @@
-W/*
+/*
  * Copyright (c) 2015 The CyanogenMod Project
  * Copyright (c) 2017 The LineageOS Project
  *
