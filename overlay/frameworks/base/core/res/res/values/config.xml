@@ -298,22 +298,7 @@
         1 - Long press back button
         2 - Long press power button
     -->
-    <integer name="config_screenPinningExitMode">2</integer>
-
-   <!-- Default files to pin via Pinner Service -->
-   <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-       <item>"/system/framework/arm64/boot-framework.oat"</item>
-       <item>"/system/framework/arm64/boot-framework.vdex"</item>
-       <item>"/system/framework/oat/arm64/services.odex"</item>
-       <item>"/system/framework/oat/arm64/services.vdex"</item>
-       <item>"/system/framework/arm64/boot.oat"</item>
-       <item>"/system/framework/arm64/boot.vdex"</item>
-       <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-       <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
-   </string-array>
-
-   <!-- Should the pinner service pin the Camera application? -->
-   <bool name="config_pinnerCameraApp">true</bool>
+    <add-resource type="integer" name="config_screenPinningExitMode">2</add-resource>
 
    <!-- Default files to pin via Pinner Service -->
    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
@@ -331,6 +316,6 @@
    <bool name="config_pinnerCameraApp">true</bool>
 
     <!-- Whether device has turbo power charging support -->
-    <bool name="config_hasTurboPowerCharger">true</bool>
+    <add-resource type="bool" name="config_hasTurboPowerCharger">true</add-resource>
 
 </resources>
