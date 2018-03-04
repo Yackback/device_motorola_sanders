@@ -7,6 +7,18 @@
   },
   {
     "remote": "github"
+    "repository: "MasterAwesome/proprietary_vendor_motorola_sanders"
+    "target_path": "vendor/motorola/sanders"
+    "branch": "lineage-15.1"
+  },
+  {
+    "remote": "github"
+    "repository": "yackback/device_motorola_sanders"
+    "target_path": "device/motorola/sanders"
+    "branch": "xenonhd-o"
+  },
+  {
+    "remote": "github"
     "repository": "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
     "branch": "lineage-15.0"

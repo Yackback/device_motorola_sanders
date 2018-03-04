@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo aicp_sanders-userdebug
+add_lunch_combo xenonhd_sanders-userdebug
