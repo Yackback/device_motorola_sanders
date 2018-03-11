@@ -174,6 +174,16 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+#SHIMS
+TARGET_LD_SHIM_LIBS :=  /system/vendor/lib/lib-imsvt.so|libshim_ims.so \
+/system/vendor/bin/adspd|libshim_adsp.so \
+/system/vendor/lib/libril-qc-qmi-1.so|rild_socket.so \
+/system/lib/libandroid.so|libshim_ril.so \
+/system/lib/lib_motsensorlistener.so|libsensor.so \
+/system/vendor/lib/libmot_gpu_mapper.so|libshim_camera.so \
+/system/lib/libjustshoot.so|libshims_camera.so \
+/system/vendor/lib/libguy.so|libshim_camera_hal.so
+
 # Manifest
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/configs/compatibility_matrix.xml
