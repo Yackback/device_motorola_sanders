@@ -25,6 +25,13 @@ BOARD_VENDOR := motorola-qcom
 # AIDs and CAPS
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+#SHIMS
+TARGET_LD_SHIM_LIBS := /system/vendor/bin/adspd|libshim_adsp.so \
+    /system/lib/lib_motsensorlistener.so|libsensor.so \
+    /system/vendor/lib/libmot_gpu_mapper.so|libshim_camera.so \
+    /system/lib/libjustshoot.so|libshims_camera.so \
+    /system/vendor/lib/libguy.so|libshim_camera_hal.so
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
@@ -55,8 +62,19 @@ DISABLE_DTC_OPTS := true
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := sanders,sanders_retail
 
+# Enable dexpreopt to speed boot time
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+    endif
+  endif
+endif
+
 # GPS
 TARGET_NO_RPC := true
+USING_DEVICE_GPS := true
 USE_DEVICE_SPECIFIC_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
@@ -81,8 +99,8 @@ TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
 
 #
 # Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linaro-7.2/bin
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-linaro-4.9/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-androidkernel-
 
 # Audio
 AUDIO_FEATURE_ENABLED_ALAC_OFFLOAD := true
@@ -141,10 +159,7 @@ ENABLE_CPUSETS := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
-
-# Enable dexpreopt to speed boot time
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
 
 # Display
 BOARD_USES_ADRENO := true
