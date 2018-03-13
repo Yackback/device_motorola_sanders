@@ -1,7 +1,7 @@
 [
   {
     "remote":      "github",
-    "repository":  "therootlord/android_kernel_motorola_msm8953",
+    "repository":  "yackback/android_kernel_motorola_msm8953",
     "target_path": "kernel/motorola/msm8953",
     "branch":      "8.1-64"
   },
@@ -28,5 +28,11 @@
     "repository":  "LineageOS/android_hardware_qcom_audio",
     "target_path": "hardware/qcom/audio-caf/msm8996",
     "branch":      "staging/lineage-15.1-caf-8996"
-  }  
+  },
+  {
+    "repository": "DirtyUnicorns/android_system_qcom",
+    "target_path": "system/qcom",
+    "branch" : "o8x-caf",
+    "remote": "github"
+  }
 ]
