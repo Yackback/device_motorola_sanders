@@ -33,4 +33,6 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=motorola/sanders/sanders:7.1.1/NPS26.116-61-2/30:user/release-keys \
+    PRIVATE_BUILD_DESC="sanders-7.1.1/NPS26.116-61-2/30:user/release-keys" \
     PRODUCT_NAME="Moto G5S Plus"
