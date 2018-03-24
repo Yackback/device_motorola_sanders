@@ -15,4 +15,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nitrogen_sanders.mk
+    $(LOCAL_DIR)/carbon_sanders.mk

@@ -15,11 +15,13 @@
 # limitations under the License.
 
 
+
+# Inherit some common Carbon stuff.
+$(call inherit-product,vendor/carbon/config/gsm.mk )
+$(call inherit-product,vendor/carbon/config/common.mk )
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sanders/full_sanders.mk)
-
-# Inherit some common Nitrogen stuff.
-$(call inherit-product,vendor/nitrogen/products/common.mk )
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -27,7 +29,7 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := nitrogen_sanders
+PRODUCT_NAME := carbon_sanders
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
@@ -36,5 +38,3 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=motorola/sanders_n/sanders_n:7.1.1/NPS26.116-61/74:user/test-keys \
     PRODUCT_NAME="Moto G5S Plus"	
-
-TARGET_VENDOR := motorola
