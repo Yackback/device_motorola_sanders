@@ -1,15 +1,15 @@
 [
   {
     "remote":      "github",
-    "repository":  "Keertesh19/kernel_motorola_msm8953",
+    "repository":  "yackback/android_kernel_motorola_msm8953",
     "target_path": "kernel/motorola/msm8953",
-    "branch":      "8.1-ods"
+    "branch":      "8.1-64"
   },
   {
     "remote":      "github",
-    "repository":  "BigTopKrazies/vendor_motorola_sanders",
+    "repository":  "yackback/proprietary_vendor_motorola_sanders",
     "target_path": "vendor/motorola/sanders",
-    "branch":      "8.1"
+    "branch":      "lineage-15.1"
   }, 
   {
     "remote":      "github",
