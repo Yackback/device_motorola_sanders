@@ -301,10 +301,10 @@
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
     <!-- Paths to the libraries that contain device specific key handlers -->
-    <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/MotoActions/MotoActions.apk</string>
+    <!--<string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/MotoActions/MotoActions.apk</string>-->
 
     <!-- Names of the key handler classes -->
-    <string name="config_deviceKeyHandlerClass" translatable="false">com.moto.actions.KeyHandler</string>
+    <!--<string name="config_deviceKeyHandlerClass" translatable="false">com.moto.actions.KeyHandler</string>-->
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
@@ -353,10 +353,10 @@
     <bool name="config_setColorTransformAccelerated">true</bool>
 
     <!-- Whether notify fingerprint client of successful cancelled authentication-->
-    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
+    <!--<bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>-->
 
    <!-- Whether device has turbo power charging support -->
-   <bool name="config_hasTurboPowerCharger">true</bool>
+   <!--<bool name="config_hasTurboPowerCharger">true</bool>-->
 
     <!-- ImsService package name to bind to by default, if config_dynamic_bind_ims is true -->
     <string name="config_ims_package">org.codeaurora.ims</string>
