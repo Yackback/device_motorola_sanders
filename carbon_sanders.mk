@@ -18,7 +18,10 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sanders/full_sanders.mk)
 
-# Inherit some common CarbonROM stuff.
+# Inherit CarbonROM telephony parts
+$(call inherit-product, vendor/carbon/config/gsm.mk)
+
+# Inherit CarbonROM product configuration
 $(call inherit-product, vendor/carbon/config/common.mk)
 
 # Boot animation
