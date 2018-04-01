@@ -14,23 +14,32 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# must be before including omni part
+TARGET_BOOTANIMATION_SIZE := 1080p
+
+# Inherit some common Nitrogen stuff.
+$(call inherit-product, vendor/nitrogen/products/common.mk)
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/sanders/full_sanders.mk)
-
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, device/motorola/sanders/device.mk)
+$(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
 
 # Boot animation
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := aosp_sanders
+PRODUCT_NAME := nitrogen_sanders
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
+# PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="Moto G5S Plus"
