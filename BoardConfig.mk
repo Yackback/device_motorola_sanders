@@ -138,6 +138,7 @@ BOARD_USES_QCNE := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
 
 # Enable dexpreopt to speed boot time
 WITH_DEXPREOPT := true
