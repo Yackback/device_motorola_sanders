@@ -53,7 +53,7 @@ TARGET_USES_64_BIT_BINDER := true
 DISABLE_DTC_OPTS := true
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := sanders, sanders-retail
+TARGET_OTA_ASSERT_DEVICE := none
 
 # GPS
 TARGET_NO_RPC := true
